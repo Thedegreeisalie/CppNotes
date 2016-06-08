@@ -1,0 +1,38 @@
+9.1 search algorithm
+	Linear or sequential searches loop recursively. 
+		Pseudo code for function linear search function:
+			Set forund to False
+			Set position to -1(last element)
+			Set index to 0
+			While index < # of elements and found is false
+				if list[index] is equasl to search value
+					found = true
+					position = index
+				End If
+				Add 1 to index
+			End while
+			Return Postion
+		They are however very slow, but that's because they are so simple, on average the item is after N/2 iterations where N is the array size. Avoid on large arrays if speed is important.
+
+	Binary search 
+	Much more effient but requires that the array be in order. Starts by jumping to the middle index and comparing the value there with the desired value. Depending how the desired compares to the middle value 1/2 of the array is eliminated as not being the desired value. The other 1/2 then is treated as the original whole before (jump to middle and compare insides) unitl the value is found or determined to not be in the equation.
+		Pseudo code for a binary search
+			Set forst to 0
+			Set last to the last subscript in thearray 
+			Set found to False
+			Set positon to -1
+			While found is not true and first is less thant or equal to last
+				set middle to the subscript halfway between first and last
+				if array[middle] = desired value
+					set found to true
+					set position to middle
+				else if array[middle] is greater than a the desired value
+					set last to middle -1
+					else set first to middle +1
+				end if
+			end while
+			return position
+	the maximum number of comparisons that binary search needs will be the smallest power of 2 that is greater than the number of items. 
+
+9.2 array of objects searches
+	the same thing but this time a little more recursive!
